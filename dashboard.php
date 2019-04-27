@@ -10,6 +10,7 @@
 ?>
     <div class="right_col" role="main"> <!-- page content -->
         <div class="">
+            <!--
             <div class="page-title">
                 <div class="row top_tiles">
                     <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
@@ -63,7 +64,7 @@
                         <h3>Nacional Noche</h3>
                     </div>
                 </div>
-            </div>
+            </div>-->
                 <!-- content -->
                 <br><br>
                 <div class="row">
