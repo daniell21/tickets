@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         </div>
-                        <!-- form seach -->
+                        <!-- form seach 
                         <form class="form-horizontal" role="form" id="gastos">
                             <div class="form-group row">
                                 <label for="q" class="col-md-1 control-label">Jugada</label>
@@ -110,8 +110,41 @@
                                     <input type="text" class="form-control" id="q"onkeyup='load(1);'>
                                 </div>
                             </div>
-                        </form>     
+                        </form>     -->
                         <!-- end form seach -->
+
+   
+
+    
+    
+          
+                
+                <div class="modal-body">
+                    <form class="form-horizontal form-label-left input_mask" method="post" id="add" name="add">
+                        <div id="result"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-1 col-sm-3 col-xs-12">Jugada<span class="required">*</span></label>
+                            <div class="col-md-2 col-sm-9 col-xs-12">
+                            <input type="text" name="jugada" class="form-control" placeholder="Jugada" >
+                            </div>
+                            <label class="control-label col-md-1 col-sm-3 col-xs-12">Monto <span class="required">*</span>
+                            </label>
+                            <div class="col-md-2 col-sm-9 col-xs-12">
+                              <input name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto"  id="q" >
+                            </div>
+                            <div class="col-md-2 col-sm-9 col-xs-12 ">
+                              <button id="save_data" type="submit" class="btn btn-success">Agregar</button>
+                            </div>
+                            <label class="control-label col-md-2 col-sm-3 col-xs-12">Monto Ticket $
+                            </label>
+                            <div class="col-md-2 col-sm-9 col-xs-12">
+                              <input class="form-control col-md-7 col-xs-12"  placeholder="Total">
+                            </div>
+                        </div>   
+                    </form>
+                </div>
+            
+
 
 
                         <div class="x_content">
@@ -152,7 +185,7 @@ $("#add").submit(function(event) {
     });
   event.preventDefault();
 })
-
+/* 
 
 $( "#upd" ).submit(function( event ) {
   $('#upd_data').attr("disabled", true);
@@ -174,22 +207,14 @@ $( "#upd" ).submit(function( event ) {
   event.preventDefault();
 })
 
+*/
+
     function obtener_datos(id){
-        var description = $("#description"+id).val();
-        var title = $("#title"+id).val();
-        var kind_id = $("#kind_id"+id).val();
-        var project_id = $("#project_id"+id).val();
-        var category_id = $("#category_id"+id).val();
-        var priority_id = $("#priority_id"+id).val();
-        var status_id = $("#status_id"+id).val();
+        var monto = $("#moto"+id).val();
+        var juagada = $("#jugada"+id).val();
             $("#mod_id").val(id);
-            $("#mod_title").val(title);
-            $("#mod_description").val(description);
-            $("#mod_kind_id").val(kind_id);
-            $("#mod_project_id").val(project_id);
-            $("#mod_category_id").val(category_id);
-            $("#mod_priority_id").val(priority_id);
-            $("#mod_status_id").val(status_id);
+            $("#mod_title").val(jugada);
+            $("#mod_description").val(monto);
         }
 
 </script>

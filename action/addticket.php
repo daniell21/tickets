@@ -1,35 +1,35 @@
 <?php	
 	session_start();
 	/*Inicia validacion del lado del servidor*/
-	if (empty($_POST['title'])) {
-           $errors[] = "Titulo vacío";
-        } else if (empty($_POST['description'])){
-			$errors[] = "Description vacío";
+	if (empty($_POST['jugada'])) {
+           $errors[] = "Jugada vacía";
+        } else if (empty($_POST['monto'])){
+			$errors[] = "Monto vacío";
 		} else if (
-			!empty($_POST['title']) &&
-			!empty($_POST['description'])
+			!empty($_POST['jugada']) &&
+			!empty($_POST['monto'])
 		){
 
 
 		include "../config/config.php";//Contiene funcion que conecta a la base de datos
 
-		$title = $_POST["title"];
-		$description = $_POST["description"];
+		$jugada = $_POST["jugada"];
+		$monto = $_POST["monto"];/*
 		$category_id = $_POST["category_id"];
 		$project_id = $_POST["project_id"];
 		$priority_id = $_POST["priority_id"];
 		$user_id = $_SESSION["user_id"];
 		$status_id = $_POST["status_id"];
 		$kind_id = $_POST["kind_id"];
-		$created_at="NOW()";
+		$created_at="NOW()";*/
 
 		// $user_id=$_SESSION['user_id'];
 
-		$sql="insert into ticket (title,description,category_id,project_id,priority_id,user_id,status_id,kind_id,created_at) value (\"$title\",\"$description\",\"$category_id\",\"$project_id\",$priority_id,$user_id,$status_id,$kind_id,$created_at)";
-
+		//$sql="insert into ticket (title,description,category_id,project_id,priority_id,user_id,status_id,kind_id,created_at) value (\"$title\",\"$description\",\"$category_id\",\"$project_id\",$priority_id,$user_id,$status_id,$kind_id,$created_at)";
+		$sql="insert into loteria (jugada,monto) value (\"$jugada\",\"$monto\")";
 		$query_new_insert = mysqli_query($con,$sql);
 			if ($query_new_insert){
-				$messages[] = "Tu ticket ha sido ingresado satisfactoriamente.";
+				$messages[] = "La juagada ha sido ingresada satisfactoriamente.";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($con);
 			}

@@ -1,4 +1,4 @@
-<?php
+<!--<?php
     $projects =mysqli_query($con, "select * from project");
     $priorities =mysqli_query($con, "select * from priority");
     $statuses =mysqli_query($con, "select * from status");
@@ -6,7 +6,7 @@
     $categories =mysqli_query($con, "select * from category");
 ?>
 
-    <div> <!-- Modal -->
+    <div> 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg-add"><i class="fa fa-plus-circle"></i> Agregar Ticket</button>
     </div>
     <div class="modal fade bs-example-modal-lg-add" tabindex="-1" role="dialog" aria-hidden="true">
@@ -105,4 +105,4 @@
                 </div>
             </div>
         </div>
-    </div> <!-- /Modal -->
+    </div> /Modal -->
