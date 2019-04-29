@@ -1,7 +1,7 @@
  
                 <footer><!-- footer content -->
                     <div class="pull-right">
-                    Copyright © 2019 Camila Bernal Consorcio K.A Sport. Julia
+                    Copyright © 2019 Consorcio K.A Sport. Julia
                     </div>
                     <div class="clearfix"></div>
                 </footer><!-- /footer content -->

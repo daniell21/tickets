@@ -125,12 +125,12 @@
                         <div class="form-group">
                             <label class="control-label col-md-1 col-sm-3 col-xs-12">Jugada<span class="required">*</span></label>
                             <div class="col-md-2 col-sm-9 col-xs-12">
-                            <input type="text" name="jugada" class="form-control" placeholder="Jugada" >
+                            <input type="number" name="jugada" class="form-control" placeholder="Jugada" >
                             </div>
                             <label class="control-label col-md-1 col-sm-3 col-xs-12">Monto <span class="required">*</span>
                             </label>
                             <div class="col-md-2 col-sm-9 col-xs-12">
-                              <input name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto" >
+                              <input type="number" name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto" >
                             </div>
                             <div class="col-md-2 col-sm-9 col-xs-12 ">
                               <button id="save_data" type="submit" class="btn btn-success">Agregar</button>
@@ -149,7 +149,9 @@
                         <form class="form-horizontal">
                             
                                 <div class="col-md-1">
-                                    <label name="monto" class="form-control col-md-0 col-xs-12"  id="q" >
+                                    <label name="monto" class="form-control col-md-0 col-xs-12"  id="q" style="    border: white;
+    height: 1px;
+    padding: 0;">
                                 </div>
                             
                         </form>  
@@ -192,30 +194,14 @@ $("#add").submit(function(event) {
           }
     });
   event.preventDefault();
-})
-/* 
+  var form = document.getElementById("add");
 
-$( "#upd" ).submit(function( event ) {
-  $('#upd_data').attr("disabled", true);
-  
- var parametros = $(this).serialize();
-     $.ajax({
-            type: "POST",
-            url: "action/updticket.php",
-            data: parametros,
-             beforeSend: function(objeto){
-                $("#result2").html("Mensaje: Cargando...");
-              },
-            success: function(datos){
-            $("#result2").html(datos);
-            $('#upd_data').attr("disabled", false);
-            load(1);
-          }
-    });
-  event.preventDefault();
+form.reset();
 })
+ 
 
-*/
+
+
 
     function obtener_datos(id){
         var monto = $("#moto"+id).val();
