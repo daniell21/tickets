@@ -89,29 +89,6 @@
                             </div>
                         </div>
                         </div>
-                        <!-- form seach 
-                        <form class="form-horizontal" role="form" id="gastos">
-                            <div class="form-group row">
-                                <label for="q" class="col-md-1 control-label">Jugada</label>
-                                <div class="col-md-2">
-                                    <input type="text" class="form-control" id="q"onkeyup='load(1);'>
-                                </div>
-                                <label for="q" class="col-md-1 control-label">Monto</label>
-                                <div class="col-md-2">
-                                    <input type="text" class="form-control" id="q" onkeyup='load(1);'>
-                                </div>
-                                <div class="col-md-2">
-                                    <button type="button" class="btn btn-default" onclick='load(1);'>
-                                        <span class="glyphicon glyphicon-search" ></span> Agregar</button>
-                                    <span id="loader"></span>
-                                </div>
-                                <label for="q" class="col-md-2 control-label">Monto Ticket $</label>
-                                <div class="col-md-2">
-                                    <input type="text" class="form-control" id="q"onkeyup='load(1);'>
-                                </div>
-                            </div>
-                        </form>     -->
-                        <!-- end form seach -->
 
    
 
@@ -130,7 +107,7 @@
                             <label class="control-label col-md-1 col-sm-3 col-xs-12">Monto <span class="required">*</span>
                             </label>
                             <div class="col-md-2 col-sm-9 col-xs-12">
-                              <input type="number" name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto" >
+                              <input type="number" name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto" step=".01" id="monto">
                             </div>
                             <div class="col-md-2 col-sm-9 col-xs-12 ">
                               <button id="save_data" type="submit" class="btn btn-success">Agregar</button>
@@ -139,7 +116,7 @@
                             <label class="control-label col-md-2 col-sm-3 col-xs-12">Monto Ticket $
                             </label>
                             <div class="col-md-2 col-sm-9 col-xs-12">
-                              <input class="form-control col-md-7 col-xs-12"  placeholder="total">
+                              <label type="number" class="form-control col-md-7 col-xs-12"  placeholder="total" id="total">0.0</label>
                             </div>
                         </div>   
                     </form>
@@ -194,6 +171,10 @@ $("#add").submit(function(event) {
           }
     });
   event.preventDefault();
+  var monto = $('#monto').val();
+  console.log(monto);
+  document.getElementById('total').textContent = parseFloat(document.getElementById('total').textContent) + parseFloat(monto);
+  $('#total').val(monto);
   var form = document.getElementById("add");
 
 form.reset();
