@@ -120,7 +120,7 @@
           
                 
                 <div class="modal-body">
-                    <form class="form-horizontal form-label-left input_mask" method="post" id="add" name="add">
+                    <form class="form-horizontal form-label-left input_mask" method="post" id="add" name="add"  role="form" >
                         <div id="result"></div>
                         <div class="form-group">
                             <label class="control-label col-md-1 col-sm-3 col-xs-12">Jugada<span class="required">*</span></label>
@@ -130,21 +130,29 @@
                             <label class="control-label col-md-1 col-sm-3 col-xs-12">Monto <span class="required">*</span>
                             </label>
                             <div class="col-md-2 col-sm-9 col-xs-12">
-                              <input name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto"  id="q" >
+                              <input name="monto" class="form-control col-md-7 col-xs-12"  placeholder="Monto" >
                             </div>
                             <div class="col-md-2 col-sm-9 col-xs-12 ">
                               <button id="save_data" type="submit" class="btn btn-success">Agregar</button>
+                              <span id="loader"></span>
                             </div>
                             <label class="control-label col-md-2 col-sm-3 col-xs-12">Monto Ticket $
                             </label>
                             <div class="col-md-2 col-sm-9 col-xs-12">
-                              <input class="form-control col-md-7 col-xs-12"  placeholder="Total">
+                              <input class="form-control col-md-7 col-xs-12"  placeholder="total">
                             </div>
                         </div>   
                     </form>
                 </div>
             
 
+                        <form class="form-horizontal">
+                            
+                                <div class="col-md-1">
+                                    <label name="monto" class="form-control col-md-0 col-xs-12"  id="q" >
+                                </div>
+                            
+                        </form>  
 
 
                         <div class="x_content">
@@ -164,7 +172,7 @@
 <?php include "footer.php" ?>
 
 <script type="text/javascript" src="js/ticket.js"></script>
-<script type="text/javascript" src="js/VentanaCentrada.js"></script>
+
 <script>
 $("#add").submit(function(event) {
   $('#save_data').attr("disabled", true);

@@ -1030,6 +1030,9 @@ a:visited {
     margin-bottom: 0
 }
 
+.invisible{
+    visibility: false;
+}
 .toggle {
     float: left;
     margin: 0;
