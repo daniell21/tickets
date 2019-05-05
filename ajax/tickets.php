@@ -43,7 +43,7 @@
             $sWhere = substr_replace( $sWhere, "", -3 );
             $sWhere .= ')';
         }
-        $sWhere.=" order by monto desc";
+        $sWhere.=" order by id asc";
         include 'pagination.php'; //include pagination file
         //pagination variables
         $page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
@@ -77,7 +77,7 @@
                             $id=$r['id'];
                             $monto=$r['monto'];
                             $jugada=$r['jugada'];
-
+ 
                            
 
 
@@ -106,12 +106,14 @@
             </div>
             <?php
         }else{
+            
            ?> 
             <div class="alert alert-warning alert-dismissible" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <strong>Aviso!</strong> No hay datos para mostrar!
             </div>
-        <?php    
+        <?php  
+        
         }
     }
 ?>

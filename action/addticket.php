@@ -5,6 +5,14 @@
            $errors[] = "Jugada vacía";
         } else if (empty($_POST['monto'])){
 			$errors[] = "Monto vacío";
+		} else if (empty($_POST['check']) && 
+		empty($_POST['check1']) && 
+		empty($_POST['check2']) && 
+		empty($_POST['check3']) && 
+		empty($_POST['check4']) && 
+		empty($_POST['check5']) && 
+		empty($_POST['check6'])){
+			$errors[] = "No ha seleccionado alguna loteria";
 		} else if (
 			!empty($_POST['jugada']) &&
 			!empty($_POST['monto'])
@@ -15,7 +23,7 @@
 
 		$jugada = $_POST["jugada"];
 		$monto = $_POST["monto"];/*
-		$category_id = $_POST["category_id"];
+		$category_id = $_POST["category_id"]; 
 		$project_id = $_POST["project_id"];
 		$priority_id = $_POST["priority_id"];
 		$user_id = $_SESSION["user_id"];
