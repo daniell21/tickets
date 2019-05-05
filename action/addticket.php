@@ -1,21 +1,25 @@
 <?php	
 	session_start();
 	/*Inicia validacion del lado del servidor*/
+	$loto = false;
+	if(empty($_POST['check']) && 
+	empty($_POST['check1']) && 
+	empty($_POST['check2']) && 
+	empty($_POST['check3']) && 
+	empty($_POST['check4']) && 
+	empty($_POST['check5']) && 
+	empty($_POST['check6'])){
+		$loto = true;
+	}
 	if (empty($_POST['jugada'])) {
            $errors[] = "Jugada vacía";
         } else if (empty($_POST['monto'])){
 			$errors[] = "Monto vacío";
-		} else if (empty($_POST['check']) && 
-		empty($_POST['check1']) && 
-		empty($_POST['check2']) && 
-		empty($_POST['check3']) && 
-		empty($_POST['check4']) && 
-		empty($_POST['check5']) && 
-		empty($_POST['check6'])){
-			$errors[] = "No ha seleccionado alguna loteria";
+		} else if ($loto){
+			$errors[] = "No ha seleccionado ninguna loteria";
 		} else if (
 			!empty($_POST['jugada']) &&
-			!empty($_POST['monto'])
+			!empty($_POST['monto']) && !$loto
 		){
 
 

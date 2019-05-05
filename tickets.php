@@ -15,7 +15,7 @@
             <div class="page-title">
                 <div class="clearfix"></div>
                 <form class="form-horizontal form-label-left input_mask" method="post" id="add" name="add"  role="form" >
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                
                 
                     <?php
                         //include("modal/new_ticket.php");
@@ -34,63 +34,64 @@
                             </ul>
                             <div class="clearfix"></div>
                         </div>
-                        <div class="x_panel">
-                        <div class="row top_tiles">
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox" name="check" class="form-check-input" id="check">
-                                        <label class="form-check-label" for="materialUnchecked">New York Dia</label>
+                        <div class="che" id="checkbox">
+                            <div class="row top_tiles">
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="check" class="form-check-input" id="check">
+                                            <label class="form-check-label" for="materialUnchecked">New York Dia</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox"  name="check1" class="form-check-input" id="check1">
+                                            <label class="form-check-label" for="materialUnchecked">Real</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox"  name="check2" class="form-check-input" id="check2">
+                                            <label class="form-check-label" for="materialUnchecked">Gana Mas</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox"  name="check3" class="form-check-input" id="check3">
+                                            <label class="form-check-label" for="materialUnchecked">Loteka</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox"  name="check1" class="form-check-input" id="check1">
-                                        <label class="form-check-label" for="materialUnchecked">Real</label>
+                            <div class="row top_tiles">
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="check4" class="form-check-input" id="check4">
+                                            <label class="form-check-label" for="materialUnchecked">New York Noche</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox"  name="check2" class="form-check-input" id="check2">
-                                        <label class="form-check-label" for="materialUnchecked">Gana Mas</label>
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="check5" class="form-check-input" id="check5">
+                                            <label class="form-check-label" for="materialUnchecked">Quiniela Pale</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox"  name="check3" class="form-check-input" id="check3">
-                                        <label class="form-check-label" for="materialUnchecked">Loteka</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row top_tiles">
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox" name="check4" class="form-check-input" id="check4">
-                                        <label class="form-check-label" for="materialUnchecked">New York Noche</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox" name="check5" class="form-check-input" id="check5">
-                                        <label class="form-check-label" for="materialUnchecked">Quiniela Pale</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
-                                <div class="tile-stats">
-                                    <div class="form-check">
-                                        <input type="checkbox" name="check6" class="form-check-input" id="check6">
-                                        <label class="form-check-label" for="materialUnchecked">Nacional Noche</label>
+                                <div class="animated flipInY col-lg- col-md-3 col-sm-6 col-xs-12">
+                                    <div class="tile-stats">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="check6" class="form-check-input" id="check6">
+                                            <label class="form-check-label" for="materialUnchecked">Nacional Noche</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -140,8 +141,7 @@
                                 <!-- /ajax -->
                             </div>
                         </div>
-                    </div>
-                </div>
+                    
             </div>
         </div>
     </div><!-- /page content -->
@@ -164,12 +164,13 @@ $("#add").submit(function(event) {
                 $("#result").html("Mensaje: Cargando...");
               },
             success: function(datos){
+                console.log(datos);
             $("#result").html(datos);
             $('#save_data').attr("disabled", false);
             load(1);
           }
     });
-
+    
     var uno = document.getElementById("check").checked;
     var dos = document.getElementById("check1").checked;
     var tres = document.getElementById("check2").checked;
@@ -180,30 +181,18 @@ $("#add").submit(function(event) {
   event.preventDefault();
   var monto = $('#monto').val();
   console.log(uno);
-  if(uno || dos || tres || custro || cinco || seis || siete){
+  var lote = false
+  if(uno || dos || tres || cuatro || cinco || seis || siete){
    document.getElementById('total').textContent = parseFloat(document.getElementById('total').textContent) + parseFloat(monto);
-   $('#total').val(monto);
-  
+  lote = true;
+}
+if(document.getElementById("jugada").value >= 0 && document.getElementById("monto").value > 0 && lote){
+    document.getElementById("checkbox").style.visibility = "hidden";
 }
 document.getElementById("jugada").value ='';
     var monto = document.getElementById("monto");
     monto.value = '';
     
-    /*var uno = document.getElementById("check");
-    uno.setAttribute("disabled", "true");
-    var dos = document.getElementById("check1");
-    dos.setAttribute("disabled", "true");
-    var tres = document.getElementById("check2");
-    tres.setAttribute("disabled", "true");
-    var cuatro = document.getElementById("check3");
-    cuatro.setAttribute("disabled", "true");
-    var cinco = document.getElementById("check4");
-    cinco.setAttribute("disabled", "true");
-    var seis = document.getElementById("check5");
-    seis.setAttribute("disabled", "true");
-    var siete = document.getElementById("check6");
-    siete.setAttribute("disabled", "true");
-    */
 })
  
     function obtener_datos(id){

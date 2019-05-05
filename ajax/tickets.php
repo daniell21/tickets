@@ -35,7 +35,7 @@
          $sWhere = "";
         if ( $_GET['q'] != "" )
         {
-            $sWhere = "WHERE (";
+            $sWhere = "WHERE ("; 
             for ( $i=0 ; $i<count($aColumns) ; $i++ )
             {
                 $sWhere .= $aColumns[$i]." LIKE '%".$q."%' OR ";
