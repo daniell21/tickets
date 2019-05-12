@@ -204,12 +204,38 @@ $("#add").submit(function(event) {
     var cinco = document.getElementById("check4").checked;
     var seis = document.getElementById("check5").checked;
     var siete = document.getElementById("check6").checked;
+    $contador = 0;
+    
+        if(document.getElementById("check").checked){
+        $contador = $contador + 1;
+        } 
+        if(document.getElementById("check1").checked){
+        $contador = $contador + 1;
+        } 
+        if(document.getElementById("check2").checked){
+        $contador = $contador + 1;
+        } 
+        if(document.getElementById("check3").checked){
+        $contador = $contador + 1;
+        } 
+        if(document.getElementById("check4").checked){
+        $contador = $contador + 1;
+        } 
+        if(document.getElementById("check5").checked){
+        $contador = $contador + 1;
+        } 
+        if(document.getElementById("check6").checked){
+        $contador = $contador + 1;
+        }
+
+
   event.preventDefault();
   var monto = $('#monto').val();
   console.log(uno);
   var lote = false
+  $jugada = parseFloat(monto) * $contador;
   if(uno || dos || tres || cuatro || cinco || seis || siete){
-   document.getElementById('total').textContent = parseFloat(document.getElementById('total').textContent) + parseFloat(monto);
+   document.getElementById('total').textContent = parseFloat(document.getElementById('total').textContent) + $jugada;
   lote = true;
 }
 if(document.getElementById("jugada").value >= 0 && document.getElementById("monto").value > 0 && lote){

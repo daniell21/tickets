@@ -9,7 +9,7 @@
 <body>
 <h1>CONSORCIO K.A SPORT. JULIA</h1>
 <p>New York Día</p> 
-<p>real</p> 
+<p>Real</p> 
 <p>Gana Más</p> 
 <p>Loteka</p> 
 <p>New York Noche</p> 

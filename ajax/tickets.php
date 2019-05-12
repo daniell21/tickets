@@ -92,7 +92,7 @@
                         <td><?php echo $monto;?></td>
                         <td ><span class="pull-right">
                         
-                        <a href="#" class='btn btn-default' title='Borrar producto' onclick="eliminar('<?php echo $id; ?>')"><i class="glyphicon glyphicon-trash"></i> </a></span></td>
+                       
                     </tr>
                 <?php
                     } //en while
