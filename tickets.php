@@ -9,7 +9,7 @@ ini_set('log_errors', 1);
     $html2pdf = new Html2Pdf('P','A4','es','true','UTF-8');
     $html2pdf->writeHTML($html);
     $html2pdf->output('ticket.pdf');
-} else if(isset($_POST['borrar'])){
+}
 
     $title ="Tickets | ";
     include "head.php";
@@ -19,11 +19,14 @@ ini_set('log_errors', 1);
     $row= mysqli_fetch_array($count_query);
     $numrows = $row['numrows'];   
 
-    
-        echo "hola";
-        }
 
 ?>
+<?php
+
+if(isset($_POST['borrar'])){
+    echo "hola";
+    }
+    ?>
 
     <div class="right_col" role="main"><!-- page content -->
         <div class="">
@@ -136,8 +139,11 @@ ini_set('log_errors', 1);
                 </form>
                 <form action="" method="POST" target="_blank">    
                     <input type="submit" value="Generar Recibo" name="print" class="btn btn-success" />
-                    <input type="submit" value="Borrar" name="borrar" class="btn btn-success" />
+                    
                 </form> 
+             <form action="" method="POST" id="delete" name="delete">
+             <button type="submit" value="Borraro" class="btn btn-success" >Borrar</button>
+                  </form>
                
             
 
@@ -212,6 +218,26 @@ if(document.getElementById("jugada").value >= 0 && document.getElementById("mont
 document.getElementById("jugada").value ='';
     var monto = document.getElementById("monto");
     monto.value = '';
+    
+})
+
+
+$("#delete").submit(function(event) {
+  $('#delete').attr("disabled", true);
+  
+ var parametros = $(this).serialize();
+     $.ajax({
+            type: "POST",
+            url: "action/deleteticket.php",
+            data: parametros,
+            success: function(datos){
+                console.log(datos);
+            $("#result").html(datos);
+            $('#save_data').attr("disabled", false);
+            load(1);
+          }
+    });
+    
     
 })
  
