@@ -1,14 +1,27 @@
 <?php
+      
+require __DIR__.'/vendor/autoload.php';
+
+use Spipu\Html2Pdf\Html2Pdf;
+
+if(isset($_POST['r'])){
+ini_set('log_errors', 1);
+    require_once 'invoice.php';
+    $html = ob_get_clean();
+
+    $html2pdf = new Html2Pdf('P','A4','es','true','UTF-8');
+    $html2pdf->writeHTML($html);
+    $html2pdf->output('ticket.pdf');
+}
+
     $title ="Tickets | ";
     include "head.php";
     include "sidebar.php";
     $sTable = "loteria";
     $count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable");
     $row= mysqli_fetch_array($count_query);
-    $numrows = $row['numrows'];
-    echo $numrows;
-    
-?> 
+    $numrows = $row['numrows'];   
+?>
 
     <div class="right_col" role="main"><!-- page content -->
         <div class="">
@@ -119,6 +132,9 @@
                         </div>
                     </div>   
                 </form>
+                <form action="" method="POST">    
+                    <input type="submit" value="Generar Recibo" name="r" />
+                </form> 
                
             
 
@@ -145,7 +161,8 @@
             </div>
         </div>
     </div><!-- /page content -->
-
+    
+    
 <?php include "footer.php" ?>
 
 
@@ -196,6 +213,7 @@ document.getElementById("jugada").value ='';
 })
  
     function obtener_datos(id){
+        
         var monto = $("#moto"+id).val();
         var juagada = $("#jugada"+id).val();
             $("#mod_id").val(id);
@@ -211,6 +229,10 @@ document.getElementById("jugada").value ='';
 });
 
 </script>
+
+
+    
+
 
 
 

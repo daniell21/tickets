@@ -1,5 +1,5 @@
-<?php 
-
+ <?php 
+ 
 require __DIR__.'/vendor/autoload.php';
 
 use Spipu\Html2Pdf\Html2Pdf;
@@ -17,4 +17,4 @@ use Spipu\Html2Pdf\Html2Pdf;
 
 <form action="" method="POST">    
     <input type="submit" value="Generar Recibo" name="crear" />
-</form>
+</form> 

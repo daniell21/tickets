@@ -113,7 +113,6 @@
               <strong>Aviso!</strong> No hay datos para mostrar!
             </div>
         <?php  
-        
         }
     }
 ?>
