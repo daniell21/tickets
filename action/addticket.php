@@ -35,16 +35,8 @@
 		$quinielaPale = isset($_POST["check5"]);
 		$nacionalNoche = isset($_POST["check6"]);
 		$nacionalNoche = isset($_POST["check6"]);
-		$sql="insert into loteriasNombre (NYD,R,GM,L,NYN,QP,NN) value (\"$newYorkDia\",\"$real\",\"$ganaMas\",\"$loteka\",\"$newYorkNoche\",\"$quinielaPale\",\"$real\")";
+		$sql="insert into loteriasNombre (NYD,R,GM,L,NYN,QP,NN) value (\"$newYorkDia\",\"$real\",\"$ganaMas\",\"$loteka\",\"$newYorkNoche\",\"$quinielaPale\",\"$nacionalNoche\")";
 		$query_new_insert = mysqli_query($con,$sql);
-		/*
-		$category_id = $_POST["category_id"]; 
-		$project_id = $_POST["project_id"];
-		$priority_id = $_POST["priority_id"];
-		$user_id = $_SESSION["user_id"];
-		$status_id = $_POST["status_id"];
-		$kind_id = $_POST["kind_id"];
-		$created_at="NOW()";*/
 
 		// $user_id=$_SESSION['user_id'];
 
