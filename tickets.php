@@ -1,10 +1,7 @@
-<?php
-      
+<?php   
 require __DIR__.'/vendor/autoload.php';
-
 use Spipu\Html2Pdf\Html2Pdf;
-
-if(isset($_POST['r'])){
+if(isset($_POST['print'])){
 ini_set('log_errors', 1);
     require_once 'invoice.php';
     $html = ob_get_clean();
@@ -12,7 +9,7 @@ ini_set('log_errors', 1);
     $html2pdf = new Html2Pdf('P','A4','es','true','UTF-8');
     $html2pdf->writeHTML($html);
     $html2pdf->output('ticket.pdf');
-}
+} else if(isset($_POST['borrar'])){
 
     $title ="Tickets | ";
     include "head.php";
@@ -21,6 +18,11 @@ ini_set('log_errors', 1);
     $count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable");
     $row= mysqli_fetch_array($count_query);
     $numrows = $row['numrows'];   
+
+    
+        echo "hola";
+        }
+
 ?>
 
     <div class="right_col" role="main"><!-- page content -->
@@ -132,8 +134,9 @@ ini_set('log_errors', 1);
                         </div>
                     </div>   
                 </form>
-                <form action="" method="POST">    
-                    <input type="submit" value="Generar Recibo" name="r" />
+                <form action="" method="POST" target="_blank">    
+                    <input type="submit" value="Generar Recibo" name="print" class="btn btn-success" />
+                    <input type="submit" value="Borrar" name="borrar" class="btn btn-success" />
                 </form> 
                
             

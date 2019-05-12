@@ -26,7 +26,18 @@
 		include "../config/config.php";//Contiene funcion que conecta a la base de datos
 
 		$jugada = $_POST["jugada"];
-		$monto = $_POST["monto"];/*
+		$monto = $_POST["monto"];
+		$newYorkDia = isset($_POST["check"]);
+		$real = isset($_POST["check1"]);
+		$ganaMas = isset($_POST["check2"]);
+		$loteka = isset($_POST["check3"]);
+		$newYorkNoche = isset($_POST["check4"]);
+		$quinielaPale = isset($_POST["check5"]);
+		$nacionalNoche = isset($_POST["check6"]);
+		$nacionalNoche = isset($_POST["check6"]);
+		$sql="insert into loteriasNombre (NYD,R,GM,L,NYN,QP,NN) value (\"$newYorkDia\",\"$real\",\"$ganaMas\",\"$loteka\",\"$newYorkNoche\",\"$quinielaPale\",\"$real\")";
+		$query_new_insert = mysqli_query($con,$sql);
+		/*
 		$category_id = $_POST["category_id"]; 
 		$project_id = $_POST["project_id"];
 		$priority_id = $_POST["priority_id"];
