@@ -88,6 +88,11 @@ $resultNombres = mysqli_query($mysqli, $queryNombres);
         <table cellspacing="4" cellpadding="2" width="100%" style="align=center">
             <thead>
                 <tr class="headings">
+                    <th style="align=center;" class="column-title">Jugada </th>
+                    <th><p style="color:white;">s</p></th>
+                    <th><p style="color:white;">s</p></th>
+                    <th style="align=center;" class="column-title">Monto </th>
+                    <th class="column-title no-link last"><span class="nobr"></span></th>
                 </tr>
             </thead>
 
@@ -104,10 +109,12 @@ $resultNombres = mysqli_query($mysqli, $queryNombres);
                     ?>
 
                     <tr class="even pointer">
-                        <td>
-                            <h4 style="padding: 1px;"><?php echo $jugada; ?> - </h4>
+                        <td style="align=center;">
+                            <h4 style="padding: 1px;"><?php echo $jugada; ?> </h4>
                         </td>
-                        <td>
+                        <td><p style="color:white;">esto puede ser si</p></td>
+                        <td><p style="color:white;">esto puede ser si</p></td>
+                        <td style="align=center;">
                             <h4>€ <?php echo number_format($monto, 0, '', '.'); ?></h4>
                         </td>
                     </tr>
