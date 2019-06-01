@@ -1,15 +1,20 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-use Spipu\Html2Pdf\Html2Pdf;
+//use Spipu\Html2Pdf\Html2Pdf;
 
 if (isset($_POST['print'])) {
     ini_set('log_errors', 1);
     require_once 'invoice.php';
-    $html = ob_get_clean();
+    /*$html = ob_get_clean();
 
     $html2pdf = new Html2Pdf('P', 'A4', 'es', 'true', 'UTF-8');
     $html2pdf->writeHTML($html);
     $html2pdf->output('ticket.pdf');
+
+    $sql = "delete from loteria";
+    $query_new_insert = mysqli_query($con, $sql);
+    $sql = "delete from loteriasNombre";
+    $query_new_insert = mysqli_query($con, $sql);*/
 }
 
 $title = "Tickets | ";
@@ -140,7 +145,7 @@ if (isset($_POST['borrar'])) {
                 </div>
             </form>
             <div style="display: -webkit-inline-box;float: right;">
-                <form action="" method="POST" target="_blank">
+                <form action="/ticket/invoice.php" method="POST" target="_blank">
                     <input type="submit" value="Generar Recibo" name="print" class="btn btn-info" />
 
                 </form>
