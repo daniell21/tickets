@@ -27,12 +27,7 @@ $numrows = $row['numrows'];
 
 
 ?>
-<?php
 
-if (isset($_POST['borrar'])) {
-    echo "hola";
-}
-?>
 
 <div class="right_col" role="main">
     <!-- page content -->
